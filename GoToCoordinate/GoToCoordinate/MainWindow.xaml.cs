@@ -18,7 +18,7 @@ namespace GoToCoordinate
     {
         private int CSSelectedIndex;
         private Dictionary<int, int> CSLookUp; //key: index of combobox item, value: SRID
-        private SGWorld66 sgworld;
+        private SGWorld71 sgworld;
         private string appdir;
         private Heading heading;
         private Coordinate mouse_coords;
@@ -45,7 +45,7 @@ namespace GoToCoordinate
             CSLookUp.Add(9, 7844); // SRID of GDA94 MGA Zone 56
             CSLookUp.Add(10, 7850); // SRID of GDA94 MGA Zone 56
 
-            sgworld = new SGWorld66();
+            sgworld = new SGWorld71();
 
             appdir = sgworld.Application.DataPath;
             SridFile = appdir + "\\Add-ons\\GoToCoordinate\\SRID.csv";
@@ -67,11 +67,11 @@ namespace GoToCoordinate
                 try
                 {
 
-                    IMouseInfo66 mouse_info = sgworld.Window.GetMouseInfo();
+                    IMouseInfo71 mouse_info = sgworld.Window.GetMouseInfo();
                     int mouse_x = mouse_info.X;
                     int mouse_y = mouse_info.Y;
 
-                    IWorldPointInfo66 wgs84_mouse_position = sgworld.Window.PixelToWorld(mouse_x, mouse_y, WorldPointType.WPT_TERRAIN);
+                    IWorldPointInfo71 wgs84_mouse_position = sgworld.Window.PixelToWorld(mouse_x, mouse_y, WorldPointType.WPT_TERRAIN);
                     double wgs84_mouse_x = wgs84_mouse_position.Position.X;
                     double wgs84_mouse_y = wgs84_mouse_position.Position.Y;
 
@@ -170,6 +170,11 @@ namespace GoToCoordinate
         private void find_heading(object sender, RoutedEventArgs e)
         {
             heading.EngageTool();
+        }
+
+        private void create_point(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("this is a test");
         }
 
         private void label_MouseDown(object sender, MouseButtonEventArgs e)

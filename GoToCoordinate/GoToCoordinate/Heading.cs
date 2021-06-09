@@ -11,7 +11,7 @@ namespace GoToCoordinate
 {
     class Heading
     {
-        private SGWorld66 _sgworld;
+        private SGWorld71 _sgworld;
         private int numClicks;
         private string lineWKT;
         private double lat1;
@@ -22,7 +22,7 @@ namespace GoToCoordinate
         private string appdir;
         private string markerImage;
 
-        public Heading(SGWorld66 sgworld)
+        public Heading(SGWorld71 sgworld)
         {
             _sgworld = sgworld;
             numClicks = 0;
@@ -54,7 +54,7 @@ namespace GoToCoordinate
         {
             numClicks += 1;
             Console.WriteLine(string.Format("Flags:{0} X:{1} Y:{2}", Flags, X, Y));
-            IWorldPointInfo66 wgs84_position = _sgworld.Window.PixelToWorld(X, Y, WorldPointType.WPT_TERRAIN);
+            IWorldPointInfo71 wgs84_position = _sgworld.Window.PixelToWorld(X, Y, WorldPointType.WPT_TERRAIN);
 
             // first click
             if (numClicks == 1)
@@ -88,7 +88,7 @@ namespace GoToCoordinate
                 File.WriteAllText(startMarkerKmlLocation, startKMLText);
 
                 // Add the KML and prevent the camera from moving
-                IPosition66 cameraPosition = _sgworld.Navigate.GetPosition();
+                IPosition71 cameraPosition = _sgworld.Navigate.GetPosition();
                 _sgworld.Creator.CreateKMLLayer(startMarkerKmlLocation, groupID);
                 _sgworld.Navigate.JumpTo(cameraPosition);
                 
