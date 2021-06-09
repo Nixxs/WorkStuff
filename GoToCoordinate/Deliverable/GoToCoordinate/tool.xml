@@ -1,0 +1,8 @@
+<Tool caption="Go To Coordinate" id="NGIS04" Path="GoToCoordinate\GoToCoordinate.exe" NeedProject="1">
+	<Icon path="gotocoordinate.ico"/>
+	<Ribbon Show="1" Toggle="0">
+		<Category id="CategoryHome" caption="" />
+		<Panel id="FMGTools" caption="FMG Tools" />
+		<ToolTip title="Go To Coordinate" description="Place a marker and zoom to a specified coordinate using a GDA94 coordinate system." />
+	</Ribbon>
+</Tool>
