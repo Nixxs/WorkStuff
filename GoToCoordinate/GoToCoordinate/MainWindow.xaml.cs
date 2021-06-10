@@ -21,6 +21,7 @@ namespace GoToCoordinate
         private SGWorld71 sgworld;
         private string appdir;
         private Heading heading;
+        private CreatePoint createPoint;
         private Coordinate mouse_coords;
         string SridFile;
         Thread mouse_position_thread;
@@ -51,6 +52,7 @@ namespace GoToCoordinate
             SridFile = appdir + "\\Add-ons\\GoToCoordinate\\SRID.csv";
 
             heading = new Heading(sgworld);
+            createPoint = new CreatePoint(sgworld);
 
             // create a new thread to run the mouse position update
             mouse_position_thread = new Thread(UpdateMousePositon);
@@ -174,7 +176,7 @@ namespace GoToCoordinate
 
         private void create_point(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("this is a test");
+            createPoint.EngageTool();
         }
 
         private void label_MouseDown(object sender, MouseButtonEventArgs e)

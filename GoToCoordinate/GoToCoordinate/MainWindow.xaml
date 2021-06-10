@@ -46,7 +46,7 @@
         <Button x:Name="close_button" Content="x" HorizontalAlignment="Center" Margin="181,-13,-2,127" VerticalAlignment="Bottom" Width="12" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Height="12" VerticalContentAlignment="Center" Padding="1,-3,1,1" FontSize="10" Click="Close_Button_Click" FontFamily="Trebuchet MS" Grid.ColumnSpan="4" RenderTransformOrigin="0.528,-0.528"/>
         <Label x:Name="cursor_label" Content="cursor position: " HorizontalAlignment="Left" Height="24" Margin="5,100,0,0" VerticalAlignment="Top" Width="178" FontSize="9" Padding="0,5,5,5" Foreground="#FF898989"/>
         <Button x:Name="Heading" Content="Find Heading" HorizontalAlignment="Left" Margin="5,80,0,0" VerticalAlignment="Top" Width="89" Click="find_heading" Height="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1,-3,1,1"/>
-        <Button x:Name="createPoint" Content="Create Point" HorizontalAlignment="Left" Margin="99,80,0,0" VerticalAlignment="Top" Width="84" Click="create_point" Height="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1,-3,1,1"/>
+        <Button x:Name="CreatePoint" Content="Create Point" HorizontalAlignment="Left" Margin="99,80,0,0" VerticalAlignment="Top" Width="84" Click="create_point" Height="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1,-3,1,1"/>
 
     </Grid>
 </Window>
