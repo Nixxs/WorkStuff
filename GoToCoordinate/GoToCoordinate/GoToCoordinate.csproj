@@ -78,6 +78,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Coordinate.cs" />
+    <Compile Include="CreatePoint.cs" />
     <Compile Include="GISTools.cs" />
     <Compile Include="Heading.cs" />
     <Compile Include="MainWindow.xaml.cs">
